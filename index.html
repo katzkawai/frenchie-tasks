@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶 Frenchie Tasks - フレンチブルドッグTODOアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="frenchie-header">
+                <h1>🐶 Frenchie Tasks</h1>
+                <p class="subtitle">かわいいフレンチブルドッグと一緒にタスク管理！</p>
+            </div>
+        </header>
+
+        <div class="frenchie-mascot" id="frenchie">
+            <div class="frenchie-face">
+                <div class="ear ear-left"></div>
+                <div class="ear ear-right"></div>
+                <div class="head">
+                    <div class="eye eye-left">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="eye eye-right">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="snout">
+                        <div class="nose"></div>
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="speech-bubble" id="speechBubble">
+                がんばって！🦴
+            </div>
+        </div>
+
+        <main>
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="新しいタスクを入力..." 
+                    maxlength="100"
+                />
+                <button id="addTaskBtn" class="add-btn">
+                    <span>追加</span>
+                    <span class="paw">🐾</span>
+                </button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">全タスク:</span>
+                    <span class="stat-value" id="totalTasks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">完了:</span>
+                    <span class="stat-value" id="completedTasks">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">残り:</span>
+                    <span class="stat-value" id="remainingTasks">0</span>
+                </div>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全て</button>
+                <button class="filter-btn" data-filter="active">未完了</button>
+                <button class="filter-btn" data-filter="completed">完了済み</button>
+            </div>
+
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-frenchie">🐕</div>
+                <p>タスクがありません</p>
+                <p class="empty-subtitle">上から新しいタスクを追加してね！</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>🦴 Made with love by Frenchie 🦴</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
